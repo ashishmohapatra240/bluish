@@ -1,0 +1,23 @@
+{
+  "name": "ws",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev:poller": "tsc -b && bun run src/poller.ts",
+    "dev:ws": "tsc -b && bun run src/index.ts",
+    "build": "tsc -b",
+    "start": "tsc -b && node ./dist/poller.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/ws": "^8.18.1",
+    "@repo/shared": "workspace:*"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
